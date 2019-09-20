@@ -128,10 +128,6 @@ h1{
     html{
         font-size:14px;
     }
-    
-    h1{
-        color:green;
-    }
 
     .ribbon__buttonsBox{
         display:flex;
@@ -158,14 +154,11 @@ h1{
 /* Media querie para pantalla móvil */
 @media screen and (max-width:480px){
     html{
-        font-size:10px;
+        font-size:12px;
     }
     
-    h1{
-        color:red;
-    }
     .container{
-        width:100%;
+        width:80%;
     }
 
     .square{
@@ -174,9 +167,9 @@ h1{
         flex-wrap:wrap;
         justify-content:space-around;
         background-color: royalblue;
-        width:100px;
-        height: 100px;
-        margin:5px;
+        width:120px;
+        height: 120px;
+        margin:10px;
         border-radius:8px;
     }
 
