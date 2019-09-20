@@ -14,13 +14,20 @@
 
 </head>
 <body>
-    <h1 id="title">Which one is the correct <span id="rgb-title">RGB</span> color?</h1>
+    <h1 id="title">Which one is the correct <span id="rgb-title" class="rgb-title">RGB</span> color?</h1>
     
     <div class="ribbon">
-        <span id="message" class="message"></span>
+        <div class="ribbon__buttonsBox">
+            <button id="reset-button" class="btn reset-button">New Colors</button>
+            <span id="message" class="message"></span>
+            <div class="difficulty-btn">
+                <button class="btn mode">Easy</button>
+                <button class="btn mode">Hard</button>
+            </div>
+        </div>
     </div>
     
-    <div id="container">
+    <div id="container" class="container">
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
