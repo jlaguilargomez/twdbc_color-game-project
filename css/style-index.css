@@ -161,11 +161,8 @@ h1{
         font-size:10px;
     }
     
-    h1{
-        color:red;
-    }
     .container{
-        width:100%;
+        width:80%;
     }
 
     .square{
@@ -176,7 +173,7 @@ h1{
         background-color: royalblue;
         width:100px;
         height: 100px;
-        margin:5px;
+        margin:20px;
         border-radius:8px;
     }
 
