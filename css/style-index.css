@@ -3,9 +3,16 @@
     padding:0;
 }
 /* Tags selectors */
+
+html{
+    font-size:16px;
+
+}
+
 body{
     background-color: #232323;
     font-family: 'Turret Road', cursive;
+    height:100vh;
 }
 
 h1{
@@ -14,7 +21,8 @@ h1{
     justify-content:space-around;
     color:white;
     background-color:#58A4B0;
-    font-weight: 700;
+    font-weight: normal;
+    font-size:1.8rem;
     text-align:center;
     text-transform: uppercase;
     height:auto;
@@ -22,12 +30,18 @@ h1{
     margin:0 auto;
 }
 
+/* Class selectors */
+.rgb-title{
+    font-weight: bold;
+    font-size:2rem;
+}
+
 .ribbon{
     display:flex;
     flex-direction: row;
     justify-content:center;
     flex-wrap:wrap;
-    height:2vh;
+    height:auto;
     color:#232323;
     background-color: beige;
     font-weight: 700;
@@ -35,20 +49,64 @@ h1{
     padding:20px;
 }
 
-.message{
+.ribbon__buttonsBox{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:50%;
+    text-align:center;
+}
+
+.btn{
+    border: none;
+    color:#58A4B0;
+    background:none;
+    text-transform: uppercase;
+    font-size:1.2rem;
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    padding:0.4rem;
+    transition: ease 0.5s;
+    /* safari */
+    --webkit-transition: ease .5s;
+    /* firefox */
+    --moz-transition: ease .5s;
+    outline: none;
+}
+
+.btn:hover{
+    color:beige;
+    background-color:#58A4B0;
+    border-radius:5px;
+}
+
+.btn-selected{
+    color:beige;
+    background-color:#58A4B0;
+    border-radius:5px;
+    
+}
+
+.difficulty-btn{
     text-align: center;
 }
 
-#container{
+.message{
+    text-align: center;
+    width:40%;
+}
+
+.container{
     display:flex;
     justify-content: space-around;
     flex-wrap:wrap;
     width:60%;
-    margin:0 auto;
+    margin:20px auto;
 }
 
 .square{
-    display:flex;
+    display:none;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-around;
@@ -56,5 +114,84 @@ h1{
     width:200px;
     height: 200px;
     margin:10px;
-    border-radius:10px;
+    border-radius:20px;
+    /* I'm telling it that whatever happens, must take 3s  */
+    transition:all .3s;
+    /* safari */
+    --webkit-transition: all .3s;
+    /* firefox */
+    --moz-transition: all .3s;
 }
+
+/* Media querie para pantalla tablet */
+@media screen and (max-width:768px) and (min-width:480px){
+    html{
+        font-size:14px;
+    }
+    
+    h1{
+        color:green;
+    }
+
+    .ribbon__buttonsBox{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .container{
+        width:80%;
+    }
+
+    .square{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        background-color: royalblue;
+        width:150px;
+        height: 150px;
+        margin:7px;
+        border-radius:8px;
+    }
+}
+
+/* Media querie para pantalla móvil */
+@media screen and (max-width:480px){
+    html{
+        font-size:10px;
+    }
+    
+    h1{
+        color:red;
+    }
+    .container{
+        width:100%;
+    }
+
+    .square{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        background-color: royalblue;
+        width:100px;
+        height: 100px;
+        margin:5px;
+        border-radius:8px;
+    }
+
+    .ribbon{
+        height: auto;
+    }
+
+    .ribbon__buttonsBox{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        width:100%;
+    }
+    
+}
+
+
+
